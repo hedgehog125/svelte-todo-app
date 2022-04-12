@@ -11,6 +11,8 @@
 </script>
 
 <main>
-	{item.name}
-    <input type="checkbox" checked={item.done} on:change={onchange} aria-label="If the task has been completed or not. Tick it when it's done" />
+    <li>
+        {item.name}
+        <input type="checkbox" checked={item.done} on:change={onchange} aria-label="If the task has been completed or not. Tick it when it's done" />
+    </li>
 </main>
