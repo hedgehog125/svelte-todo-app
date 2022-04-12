@@ -5,9 +5,13 @@
 </script>
 
 <main>
-    <ul>
-        {#each todoItems as item, index (item.id)}
-            <TodoItem {todoItems} {index} {toggleItem} />
-        {/each}
-    </ul>
+    {#if todoItems.length == 0}
+        You haven't got anything else left to do
+    {:else}
+        <ul>
+            {#each todoItems as item, index (item.id)}
+                <TodoItem {todoItems} {index} {toggleItem} />
+            {/each}
+        </ul>
+    {/if}
 </main>
