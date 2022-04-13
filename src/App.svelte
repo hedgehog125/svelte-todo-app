@@ -41,6 +41,11 @@
 </main>
 
 <style>
+    :global(*) {
+        transition-property: all;
+        transition-duration: 0.25s;
+    }
+
     :global(html, body) {
         position: relative;
         width: 100%;
@@ -56,7 +61,7 @@
     }
 
     :global(a) {
-        color: rgb(0,100,200);
+        color: rgb(0, 100, 200);
         text-decoration: none;
     }
 
@@ -75,7 +80,26 @@
         margin: 0 0 0.5em 0;
         box-sizing: border-box;
         border: 1px solid #ccc;
-        border-radius: 2px;
+        border-radius: 7.5px;
+    }
+
+    :global(input:placeholder-shown) {
+        position: relative;
+    }
+
+    :global(input::placeholder) {
+        transition-property: all;
+        transition-duration: 0.25s;
+        
+        left: 50%;
+        transform: translate(-50%);
+        position: absolute;
+    }
+
+    :global(input:placeholder-shown:focus::placeholder) {
+        left: 0%;
+        padding-left: 6.4px;
+        transform: unset;
     }
 
     :global(input:disabled) {
@@ -83,16 +107,19 @@
     }
 
     :global(button) {
-        color: #333;
-        background-color: #f4f4f4;
         outline: none;
     }
 
-    :global(button:disabled) {
-        color: #999;
+    :global(button:enabled) {
+        color: #EFEFEF;
+        background-color: rgb(80, 80, 255);
     }
 
-    :global(button:not(:disabled):active) {
+    :global(button:disabled) {
+        color: #BBB;
+    }
+
+    :global(button:active) {
         background-color: #ddd;
     }
 
