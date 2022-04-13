@@ -3,6 +3,8 @@
 
     import TodoList from "./TodoList.svelte";
     import TodoBar from "./TodoBar.svelte";
+    import RoundedBoxBackground from "./RoundedBoxBackground.svelte";
+
     import {findID} from "./Helper.js";
     
     let todoItems = JSON.parse(localStorage.getItem(STORAGE_KEY))?? [];
@@ -34,10 +36,14 @@
 </script>
 
 <main>
+    <RoundedBoxBackground>
+
 	<TodoList {todoItems} {toggleItem} />
 
     <br>
     <TodoBar {addItem} {deleteCompleted} completedCount={completed.length} taskCount={todoItems.length} />
+    </RoundedBoxBackground>
+
 </main>
 
 <style>
@@ -53,7 +59,9 @@
     }
 
     :global(body) {
-        color: #333;
+        background-color: black;
+        color: #EFEFEF;
+
         margin: 0;
         padding: 8px;
         box-sizing: border-box;
@@ -70,7 +78,7 @@
     }
 
     :global(a:visited) {
-        color: rgb(0,80,160);
+        color: rgb(0, 80, 160);
     }
 
     :global(input, button, select, textarea) {
@@ -91,14 +99,14 @@
         transition-property: all;
         transition-duration: 0.25s;
         
+        position: absolute;
         left: 50%;
         transform: translate(-50%);
-        position: absolute;
     }
 
     :global(input:placeholder-shown:focus::placeholder) {
-        left: 0%;
         padding-left: 6.4px;
+        left: 0%;
         transform: unset;
     }
 
@@ -112,7 +120,7 @@
 
     :global(button:enabled) {
         color: #EFEFEF;
-        background-color: rgb(80, 80, 255);
+        background-color: rgb(60, 60, 220);
     }
 
     :global(button:disabled) {
@@ -120,10 +128,14 @@
     }
 
     :global(button:active) {
-        background-color: #ddd;
+        background-color: #DDD;
     }
 
     :global(button:focus) {
         border-color: #666;
+    }
+
+    :global(li) {
+        list-style-position: inside;
     }
 </style>
