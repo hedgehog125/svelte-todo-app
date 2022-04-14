@@ -578,7 +578,9 @@ var app = (function () {
     			attr_dev(input, "type", "checkbox");
     			input.checked = input_checked_value = /*item*/ ctx[0].done;
     			attr_dev(input, "aria-label", "If the task has been completed or not. Tick it when it's done");
+    			attr_dev(input, "class", "svelte-1btwg3z");
     			add_location(input, file$4, 15, 8, 233);
+    			attr_dev(li, "class", "svelte-1btwg3z");
     			add_location(li, file$4, 13, 4, 200);
     			add_location(main, file$4, 12, 0, 189);
     		},
@@ -765,7 +767,7 @@ var app = (function () {
     				each_blocks[i].c();
     			}
 
-    			attr_dev(ul, "class", "svelte-1pkywmp");
+    			attr_dev(ul, "class", "svelte-3uk4zh");
     			add_location(ul, file$3, 11, 12, 239);
     		},
     		m: function mount(target, anchor) {
@@ -937,7 +939,7 @@ var app = (function () {
     			main = element("main");
     			div = element("div");
     			if_block.c();
-    			attr_dev(div, "class", "svelte-1pkywmp");
+    			attr_dev(div, "class", "svelte-3uk4zh");
     			add_location(div, file$3, 7, 4, 116);
     			add_location(main, file$3, 6, 0, 105);
     		},
@@ -1122,18 +1124,23 @@ var app = (function () {
     			attr_dev(input, "type", "text");
     			attr_dev(input, "placeholder", "What do you need to do?");
     			attr_dev(input, "aria-label", "The task you want to add to your to do list");
-    			attr_dev(input, "class", "svelte-1ya3uj8");
+    			attr_dev(input, "class", "svelte-selpyk");
     			add_location(input, file$2, 19, 12, 372);
     			attr_dev(button0, "type", "submit");
     			button0.disabled = /*textEmpty*/ ctx[4];
+    			attr_dev(button0, "class", "svelte-selpyk");
     			add_location(button0, file$2, 20, 12, 525);
     			attr_dev(button1, "type", "button");
     			button1.disabled = button1_disabled_value = /*completedCount*/ ctx[1] == 0;
+    			attr_dev(button1, "class", "svelte-selpyk");
     			add_location(button1, file$2, 21, 12, 610);
+    			attr_dev(form, "class", "svelte-selpyk");
     			add_location(form, file$2, 18, 8, 320);
+    			attr_dev(br, "class", "svelte-selpyk");
     			add_location(br, file$2, 24, 8, 745);
-    			attr_dev(div, "class", "svelte-1ya3uj8");
+    			attr_dev(div, "class", "svelte-selpyk");
     			add_location(div, file$2, 17, 4, 306);
+    			attr_dev(main, "class", "svelte-selpyk");
     			add_location(main, file$2, 16, 0, 295);
     		},
     		l: function claim(nodes) {

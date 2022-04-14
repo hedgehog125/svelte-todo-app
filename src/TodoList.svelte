@@ -25,7 +25,8 @@
         top: 25px;
         transform: translate(-50%);
         padding: 0px;
-        text-align: left;
+        width: 90%;
+        height: 80%;
     }
 
     div > * {
@@ -35,5 +36,7 @@
     ul {
         display: inline-block;
         padding: 0px;
+        width: fit-content;
+        height: fit-content;
     }
 </style>

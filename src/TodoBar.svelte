@@ -28,15 +28,34 @@
 </main>
 
 <style>
+    * {
+        font-size: 2vw;
+    }
+
     input[type="text"] {
         width: 250px;
     }
 
+    input, button {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
     div {
         position: absolute;
-        left: 50%;
+        width: 90%;
+        padding-left: 5%;
+        top: 80%;
         bottom: 0%;
-        transform: translate(-50%);
+        justify-content: center;
         padding-bottom: 25px;
+   }
+
+    form {
+        display: flex;
+    }
+
+    form > * {
+        flex-grow: 0.3333333;
     }
 </style>

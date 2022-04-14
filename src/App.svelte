@@ -101,13 +101,14 @@
         
         position: absolute;
         left: 50%;
-        transform: translate(-50%);
+        top: 50%;
+        transform: translate(-50%, -50%);
     }
 
     :global(input:placeholder-shown:focus::placeholder) {
         padding-left: 6.4px;
         left: 0%;
-        transform: unset;
+        transform: translateY(-50%);
     }
 
     :global(input:disabled) {
